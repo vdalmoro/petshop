@@ -1,0 +1,16 @@
+2023-10-23T18:36:26.725Z [petshop-api] info GET /owner
+2023-10-23T19:00:14.020Z [petshop-api] info GET /owner/id
+2023-10-23T19:01:06.083Z [petshop-api] info GET /owner/id
+2023-10-23T19:12:56.473Z [petshop-api] error DELETE  - there is no parameter $1
+2023-10-23T19:13:05.232Z [petshop-api] info GET /owners
+2023-10-23T19:14:41.415Z [petshop-api] info DELETE /owner/id
+2023-10-23T19:14:44.942Z [petshop-api] info GET /owners
+2023-10-23T19:17:41.593Z [petshop-api] info GET /owners
+2023-10-23T19:17:48.122Z [petshop-api] info DELETE /owner/id
+2023-10-23T19:18:02.518Z [petshop-api] error POST  - loggers is not defined
+2023-10-23T20:25:48.837Z [petshop-api] error POST  - JSON.stringfy is not a function
+2023-10-23T20:26:44.507Z [petshop-api] error PUT  - Client ID, Name e Phone são obrigatorios.
+2023-10-23T20:27:07.054Z [petshop-api] error PUT  - JSON.stringfy is not a function
+2023-10-23T20:27:11.970Z [petshop-api] error PUT  - JSON.stringfy is not a function
+2023-10-23T20:33:47.341Z [petshop-api] info POST /owner - {"proprietario_id":7,"nome":"Juca Bala","telefone":"(49) 1234-2323"}
+2023-10-23T20:34:04.425Z [petshop-api] info PUT /owner - {"proprietario_id":7,"nome":"Juca Bala 38","telefone":"(49) 1234-3232"}

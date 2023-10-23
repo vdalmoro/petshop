@@ -10,7 +10,7 @@ const myFormat = printf(({ level, message, label, timestamp }) => {
 });
 global.logger = winston.createLogger({
   level: "silly",
-  transaports: [
+  transports: [
     new winston.transports.Console(),
     new winston.transports.File({ filename: "petshop-api.log" }),
   ],
