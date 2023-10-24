@@ -14,3 +14,12 @@
 2023-10-23T20:27:11.970Z [petshop-api] error PUT  - JSON.stringfy is not a function
 2023-10-23T20:33:47.341Z [petshop-api] info POST /owner - {"proprietario_id":7,"nome":"Juca Bala","telefone":"(49) 1234-2323"}
 2023-10-23T20:34:04.425Z [petshop-api] info PUT /owner - {"proprietario_id":7,"nome":"Juca Bala 38","telefone":"(49) 1234-3232"}
+2023-10-24T19:00:33.634Z [petshop-api] info GET /owner/id
+2023-10-24T19:29:24.263Z [petshop-api] error POST  - null value in column "tipo" of relation "animais" violates not-null constraint
+2023-10-24T19:30:20.862Z [petshop-api] info POST /animal - {"animal_id":2,"nome":"ZettaDOG","tipo":"Cachorro","proprietario_id":3}
+2023-10-24T19:30:47.861Z [petshop-api] info GET /animals
+2023-10-24T19:32:47.130Z [petshop-api] info DELETE /animal/id
+2023-10-24T19:32:51.962Z [petshop-api] info POST /animal - {"animal_id":3,"nome":"ZettaDOG","tipo":"Cachorro","proprietario_id":3}
+2023-10-24T19:37:25.325Z [petshop-api] error PUT  - null value in column "tipo" of relation "animais" violates not-null constraint
+2023-10-24T19:38:04.914Z [petshop-api] error PUT  - insert or update on table "animais" violates foreign key constraint "fk_proprietarios"
+2023-10-24T19:38:38.368Z [petshop-api] info PUT /animal - {"animal_id":3,"nome":"Juca Bala 38","tipo":"Gato","proprietario_id":5}
