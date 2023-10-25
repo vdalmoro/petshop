@@ -23,3 +23,87 @@
 2023-10-24T19:37:25.325Z [petshop-api] error PUT  - null value in column "tipo" of relation "animais" violates not-null constraint
 2023-10-24T19:38:04.914Z [petshop-api] error PUT  - insert or update on table "animais" violates foreign key constraint "fk_proprietarios"
 2023-10-24T19:38:38.368Z [petshop-api] info PUT /animal - {"animal_id":3,"nome":"Juca Bala 38","tipo":"Gato","proprietario_id":5}
+2023-10-25T11:19:15.931Z [petshop-api] info GET /owners
+2023-10-25T11:19:33.687Z [petshop-api] error POST  - proprietario_id is not defined
+2023-10-25T11:19:54.766Z [petshop-api] error POST  - proprietario_id is not defined
+2023-10-25T11:22:22.343Z [petshop-api] error POST  - owner is not defined
+2023-10-25T11:22:54.525Z [petshop-api] error POST  - O proprietario_id informado não existe.
+2023-10-25T11:23:00.784Z [petshop-api] info POST /animal - {"animal_id":4,"nome":"Sombra","tipo":"Gato","proprietario_id":3}
+2023-10-25T11:23:40.208Z [petshop-api] error POST  - O proprietario_id informado não existe.
+2023-10-25T11:26:22.098Z [petshop-api] error PUT  - O proprietario_id informado não existe.
+2023-10-25T11:26:27.084Z [petshop-api] info PUT /animal - {"animal_id":3,"nome":"Juca Bala 38","tipo":"Gato","proprietario_id":5}
+2023-10-25T12:01:26.147Z [petshop-api] info GET /owners
+2023-10-25T12:01:34.003Z [petshop-api] info GET /animals
+2023-10-25T12:01:41.361Z [petshop-api] info GET /owners
+2023-10-25T12:01:51.087Z [petshop-api] error DELETE  - O proprietario possui animais associados.
+2023-10-25T12:01:56.224Z [petshop-api] info GET /owners
+2023-10-25T12:02:08.752Z [petshop-api] info DELETE /animal/id
+2023-10-25T12:02:12.012Z [petshop-api] info GET /animals
+2023-10-25T12:02:15.497Z [petshop-api] error DELETE  - O proprietario possui animais associados.
+2023-10-25T12:02:21.970Z [petshop-api] info GET /owner/id
+2023-10-25T12:02:42.611Z [petshop-api] info GET /animals
+2023-10-25T12:02:47.926Z [petshop-api] error DELETE  - O proprietario possui animais associados.
+2023-10-25T12:02:50.341Z [petshop-api] info GET /owner/id
+2023-10-25T12:05:15.717Z [petshop-api] info POST /owner - {"proprietario_id":8,"nome":"Juca Bala","telefone":"(49) 1234-2323"}
+2023-10-25T12:05:22.166Z [petshop-api] info POST /owner - {"proprietario_id":9,"nome":"JOrge","telefone":"(49) 1234-2323"}
+2023-10-25T12:05:29.313Z [petshop-api] info POST /owner - {"proprietario_id":10,"nome":"Breu","telefone":"(49) 1234-2323"}
+2023-10-25T12:05:36.226Z [petshop-api] info GET /owners
+2023-10-25T12:05:51.820Z [petshop-api] info POST /animal - {"animal_id":5,"nome":"Bart","tipo":"Gato","proprietario_id":3}
+2023-10-25T12:05:55.438Z [petshop-api] info GET /owners
+2023-10-25T12:06:00.435Z [petshop-api] info GET /animals
+2023-10-25T12:06:10.727Z [petshop-api] error DELETE  - O proprietario possui animais associados.
+2023-10-25T12:06:16.674Z [petshop-api] info GET /owners
+2023-10-25T12:06:23.387Z [petshop-api] info GET /animals
+2023-10-25T12:06:30.161Z [petshop-api] info DELETE /animal/id
+2023-10-25T12:06:35.491Z [petshop-api] info GET /animals
+2023-10-25T12:06:39.765Z [petshop-api] info GET /owners
+2023-10-25T12:06:42.914Z [petshop-api] error DELETE  - O proprietario possui animais associados.
+2023-10-25T12:06:48.357Z [petshop-api] info GET /owner/id
+2023-10-25T12:07:34.004Z [petshop-api] info GET /owners
+2023-10-25T12:19:00.618Z [petshop-api] error DELETE  - animalsRepositories.getAnimalsByOwner is not a function
+2023-10-25T12:26:54.340Z [petshop-api] error DELETE  - Cannot access 'animal' before initialization
+2023-10-25T12:51:16.423Z [petshop-api] info GET /animals
+2023-10-25T12:51:48.320Z [petshop-api] info POST /animal - {"animal_id":6,"nome":"Bart","tipo":"Gato","proprietario_id":3}
+2023-10-25T12:51:49.977Z [petshop-api] info POST /animal - {"animal_id":7,"nome":"Bart","tipo":"Gato","proprietario_id":3}
+2023-10-25T12:51:56.348Z [petshop-api] info GET /animals
+2023-10-25T12:52:22.795Z [petshop-api] info GET /animals
+2023-10-25T12:53:26.045Z [petshop-api] info GET /animals
+2023-10-25T12:53:54.248Z [petshop-api] info GET /owners
+2023-10-25T12:54:57.109Z [petshop-api] info GET /animals
+2023-10-25T12:55:08.338Z [petshop-api] info GET /owners
+2023-10-25T12:55:23.486Z [petshop-api] error DELETE  - O proprietario possui animais associados.
+2023-10-25T12:55:29.457Z [petshop-api] info GET /owners
+2023-10-25T12:55:43.115Z [petshop-api] info DELETE /animal/id
+2023-10-25T12:55:45.686Z [petshop-api] error DELETE  - O proprietario possui animais associados.
+2023-10-25T12:55:54.082Z [petshop-api] info GET /owners
+2023-10-25T12:57:17.096Z [petshop-api] error DELETE  - O proprietario possui animais associados.
+2023-10-25T12:57:26.312Z [petshop-api] info GET /animals
+2023-10-25T13:41:21.978Z [petshop-api] info GET /owner/id
+2023-10-25T13:41:27.159Z [petshop-api] info GET /animals
+2023-10-25T13:41:43.758Z [petshop-api] error DELETE  - update or delete on table "proprietarios" violates foreign key constraint "fk_proprietarios" on table "animais"
+2023-10-25T13:42:24.915Z [petshop-api] error DELETE  - update or delete on table "proprietarios" violates foreign key constraint "fk_proprietarios" on table "animais"
+2023-10-25T13:44:07.997Z [petshop-api] error DELETE  - O proprietario possui animais associados.
+2023-10-25T13:44:24.569Z [petshop-api] info DELETE /owner/id
+2023-10-25T13:46:03.350Z [petshop-api] info DELETE /owner/id
+2023-10-25T13:46:33.646Z [petshop-api] info DELETE /owner/id
+2023-10-25T13:46:39.431Z [petshop-api] info GET /owners
+2023-10-25T13:46:48.969Z [petshop-api] info DELETE /owner/id
+2023-10-25T13:46:52.141Z [petshop-api] info GET /owners
+2023-10-25T13:46:56.500Z [petshop-api] error DELETE  - O proprietario possui animais associados.
+2023-10-25T13:46:59.460Z [petshop-api] info GET /owners
+2023-10-25T14:07:13.368Z [petshop-api] error DELETE  - O proprietario possui animais associados.
+2023-10-25T14:07:18.789Z [petshop-api] info GET /owners
+2023-10-25T14:07:26.314Z [petshop-api] info GET /animals
+2023-10-25T14:07:39.384Z [petshop-api] info POST /animal - {"animal_id":8,"nome":"Bart","tipo":"Gato","proprietario_id":2}
+2023-10-25T14:07:41.844Z [petshop-api] info GET /animals
+2023-10-25T14:07:46.467Z [petshop-api] error DELETE  - O proprietario possui animais associados.
+2023-10-25T14:07:55.928Z [petshop-api] info DELETE /animal/id
+2023-10-25T14:07:58.599Z [petshop-api] info DELETE /owner/id
+2023-10-25T14:08:02.855Z [petshop-api] info GET /owners
+2023-10-25T14:11:25.673Z [petshop-api] info GET /animals
+2023-10-25T14:11:28.572Z [petshop-api] info GET /animals
+2023-10-25T14:11:36.135Z [petshop-api] info GET /animals
+2023-10-25T14:22:30.663Z [petshop-api] info GET /owners
+2023-10-25T14:22:36.955Z [petshop-api] info GET /animal/id
+2023-10-25T14:22:41.550Z [petshop-api] info GET /animals
+2023-10-25T14:22:45.337Z [petshop-api] info GET /animals

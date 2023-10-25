@@ -1,10 +1,17 @@
 import animalsRepositories from "../repositories/animals.repositories.js";
+import ownersRepositories from "../repositories/owners.repositories.js";
 
 async function createAnimal(animal) {
-  return await animalsRepositories.insertAnimal(animal);
+  if (await ownersRepositories.getOwner(animal.proprietario_id)) {
+    return await animalsRepositories.insertAnimal(animal);
+  }
+  throw new Error("O proprietario_id informado não existe.");
 }
 
-async function getAnimals() {
+async function getAnimals(id) {
+  if (id) {
+    return await animalsRepositories.getAnimalsByOwner(id);
+  }
   return await animalsRepositories.getAnimals();
 }
 
@@ -17,7 +24,10 @@ async function deleteAnimal(id) {
 }
 
 async function updateAnimal(animal) {
-  return await animalsRepositories.updateAnimal(animal);
+  if (await ownersRepositories.getOwner(animal.proprietario_id)) {
+    return await animalsRepositories.updateAnimal(animal);
+  }
+  throw new Error("O proprietario_id informado não existe.");
 }
 
 export default {

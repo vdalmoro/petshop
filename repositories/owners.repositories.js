@@ -60,9 +60,17 @@ async function updateOwner(owner) {
 async function deleteOwner(id) {
   const conn = await connect();
   try {
-    await conn.query("DELETE FROM proprietarios WHERE proprietario_id = $1 ", [
-      id,
-    ]);
+    const res = await conn.query(
+      "SELECT * FROM animais WHERE proprietario_id = $1 ",
+      [id]
+    );
+    if (res.rows[0]) {
+      throw new Error("O proprietario possui animais associados.");
+    } else
+      await conn.query(
+        "DELETE FROM proprietarios WHERE proprietario_id = $1 ",
+        [id]
+      );
   } catch (err) {
     throw err;
   } finally {
