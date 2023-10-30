@@ -1,11 +1,11 @@
-import connect from "./db.js";
+import { connect } from "./db.js";
 
-async function insertAnimal(animal) {
+async function insertService(service) {
   const conn = await connect();
   try {
     const sql =
-      "INSERT INTO animais (nome, tipo, proprietario_id) VALUES ($1, $2, $3) RETURNING *";
-    const values = [animal.name, animal.type, animal.proprietario_id];
+      "INSERT INTO servicos (descricao, valor, animal_id) VALUES ($1, $2, $3) RETURNING *";
+    const values = [service.desc, service.value, service.animal_id];
     const res = await conn.query(sql, values);
     return res.rows[0];
   } catch (err) {
@@ -15,10 +15,10 @@ async function insertAnimal(animal) {
   }
 }
 
-async function getAnimals() {
+async function getServices() {
   const conn = await connect();
   try {
-    const res = await conn.query("SELECT * FROM animais");
+    const res = await conn.query("SELECT * FROM servicos");
     return res.rows;
   } catch (err) {
     throw err;
@@ -27,7 +27,7 @@ async function getAnimals() {
   }
 }
 
-async function getAnimalsByOwner(ownerid) {
+async function getServicesByOwner(ownerid) {
   const conn = await connect();
   try {
     const res = await conn.query(
@@ -42,12 +42,13 @@ async function getAnimalsByOwner(ownerid) {
   }
 }
 
-async function getAnimal(id) {
+async function getService(id) {
   const conn = await connect();
   try {
-    const res = await conn.query("SELECT * FROM animais WHERE animal_id = $1", [
-      id,
-    ]);
+    const res = await conn.query(
+      "SELECT * FROM servicos WHERE service_id = $1",
+      [id]
+    );
     return res.rows[0];
   } catch (err) {
     throw err;
@@ -56,16 +57,16 @@ async function getAnimal(id) {
   }
 }
 
-async function updateAnimal(animal) {
+async function updateService(service) {
   const conn = await connect();
   try {
     const sql =
-      "UPDATE animais SET nome = $1, tipo = $2, proprietario_id = $3  WHERE animal_id = $4 RETURNING *";
+      "UPDATE servicos SET descricao = $1, valor = $2, animal_id = $3  WHERE service_id = $4 RETURNING *";
     const values = [
-      animal.name,
-      animal.type,
-      animal.proprietario_id,
-      animal.animal_id,
+      service.desc,
+      service.value,
+      service.animal_id,
+      service.service_id,
     ];
     const res = await conn.query(sql, values);
     return res.rows[0];
@@ -76,10 +77,10 @@ async function updateAnimal(animal) {
   }
 }
 
-async function deleteAnimal(id) {
+async function deleteService(id) {
   const conn = await connect();
   try {
-    await conn.query("DELETE FROM animais WHERE animal_id = $1 ", [id]);
+    await conn.query("DELETE FROM servicos WHERE service_id = $1 ", [id]);
   } catch (err) {
     throw err;
   } finally {
@@ -88,10 +89,10 @@ async function deleteAnimal(id) {
 }
 
 export default {
-  insertAnimal,
-  getAnimal,
-  getAnimals,
-  getAnimalsByOwner,
-  updateAnimal,
-  deleteAnimal,
+  insertService,
+  getService,
+  getServices,
+  getServicesByOwner,
+  updateService,
+  deleteService,
 };

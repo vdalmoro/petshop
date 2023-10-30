@@ -1,25 +1,28 @@
 import Sequelize from "sequelize";
 import db from "../repositories/db.js";
+import Animal from "./animals.model.js";
 
-const owner = db.define(
-  "proprietarios",
+const service = db.define(
+  "services",
   {
-    proprietarioId: {
+    serviceid: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allowNull: false,
       primaryKey: true,
     },
-    nome: {
+    desc: {
       type: Sequelize.STRING,
       allowNull: false,
     },
-    telefone: {
-      type: Sequelize.STRING,
+    value: {
+      type: Sequelize.DOUBLE,
       allowNull: false,
     },
   },
   { underscored: true }
 );
 
-export default owner;
+service.belongsTo(Animal, { foreignKey: "animalId" });
+
+export default service;

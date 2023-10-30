@@ -3,7 +3,7 @@ import ownersService from "../services/owners.service.js";
 async function createOwner(req, res, next) {
   try {
     let owner = req.body;
-    if (!owner.name || !owner.phone) {
+    if (!owner.nome || !owner.telefone) {
       throw new Error("Name e Phone são obrigatorios.");
     }
     owner = await ownersService.createOwner(owner);
@@ -45,7 +45,7 @@ async function deleteOwner(req, res, next) {
 async function updateOwner(req, res, next) {
   try {
     let owner = req.body;
-    if (!owner.proprietario_id || !owner.name || !owner.phone) {
+    if (!owner.proprietarioId || !owner.nome || !owner.telefone) {
       throw new Error("Client ID, Name e Phone são obrigatorios.");
     }
     owner = await ownersService.updateOwner(owner);

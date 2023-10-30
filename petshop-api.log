@@ -123,3 +123,31 @@
 2023-10-25T16:54:37.799Z [petshop-api] info GET /animals
 2023-10-25T16:54:59.224Z [petshop-api] info GET /owner/id
 2023-10-25T16:55:04.610Z [petshop-api] info GET /animals
+2023-10-30T18:34:47.535Z [petshop-api] error GET  - relation "owners" does not exist
+2023-10-30T18:35:31.198Z [petshop-api] error GET  - relation "owners" does not exist
+2023-10-30T18:36:41.337Z [petshop-api] error GET  - column "ownerid" does not exist
+2023-10-30T18:37:21.063Z [petshop-api] info GET /owners
+2023-10-30T18:39:16.881Z [petshop-api] info GET /owners
+2023-10-30T18:49:33.615Z [petshop-api] info GET /owners
+2023-10-30T18:50:05.482Z [petshop-api] info GET /owner/id
+2023-10-30T18:50:12.513Z [petshop-api] info GET /owner/id
+2023-10-30T18:50:45.492Z [petshop-api] error POST  - notNull Violation: proprietarios.nome cannot be null,
+notNull Violation: proprietarios.telefone cannot be null
+2023-10-30T18:54:17.310Z [petshop-api] info POST /owner - {"proprietarioId":7,"nome":"Breu","telefone":"(49) 1234-2323"}
+2023-10-30T18:55:34.002Z [petshop-api] error PUT  - Client ID, Name e Phone são obrigatorios.
+2023-10-30T18:56:18.403Z [petshop-api] info PUT /owner - {"proprietarioId":7,"nome":"Juca Bala 1","telefone":"(49) 1234-3232"}
+2023-10-30T18:57:08.425Z [petshop-api] info DELETE /owner/id
+2023-10-30T18:57:12.391Z [petshop-api] info GET /owners
+2023-10-30T18:57:17.100Z [petshop-api] info GET /owner/id
+2023-10-30T18:57:20.449Z [petshop-api] info GET /owner/id
+2023-10-30T19:11:46.437Z [petshop-api] error GET  - connect is not a function
+2023-10-30T19:20:32.257Z [petshop-api] error GET  - connect is not a function
+2023-10-30T19:20:46.129Z [petshop-api] error GET  - connect is not a function
+2023-10-30T19:20:54.436Z [petshop-api] error GET  - connect is not a function
+2023-10-30T19:22:39.531Z [petshop-api] error GET  - connect is not a function
+2023-10-30T19:25:00.108Z [petshop-api] info GET /owners
+2023-10-30T19:25:12.407Z [petshop-api] info GET /owner/id
+2023-10-30T19:27:20.320Z [petshop-api] info GET /owner/id
+2023-10-30T19:27:26.245Z [petshop-api] error GET  - connect is not a function
+2023-10-30T19:31:10.502Z [petshop-api] error GET  - connect is not a function
+2023-10-30T19:32:13.403Z [petshop-api] error GET  - connect is not a function
