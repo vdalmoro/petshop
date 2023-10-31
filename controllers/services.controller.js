@@ -1,9 +1,9 @@
 import servicesService from "../services/services.service.js";
-Owner;
+
 async function createService(req, res, next) {
   try {
     let service = req.body;
-    if (!service.desc || !service.value || !service.animal_id) {
+    if (!service.descricao || !service.valor || !service.animalId) {
       throw new Error("Desc, value e animal são obrigatorios.");
     }
     service = await servicesService.createService(service);
@@ -16,7 +16,12 @@ async function createService(req, res, next) {
 
 async function getServices(req, res, next) {
   try {
-    res.send(await servicesService.getServices(req.query.animal_id));
+    res.send(
+      await servicesService.getServices(
+        req.query.animalId,
+        req.query.proprietarioId
+      )
+    );
     logger.info("GET /services");
   } catch (err) {
     next(err);

@@ -1,11 +1,17 @@
+import owner from "../models/owners.model.js";
 import servicesRepositories from "../repositories/services.repositories.js";
-import animalsRepositories from "../repositories/animals.repositories.js";
 
 async function createService(service) {
-  return await servicesRepositories.insertService(service);
+  return await servicesRepositories.createServiceService(service);
 }
 
-async function getServices() {
+async function getServices(animalId, proprietarioId) {
+  if (animalId) {
+    return await servicesRepositories.getServicesByAnimal(animalId);
+  }
+  if (proprietarioId) {
+    return await servicesRepositories.getServicesByProp(proprietarioId);
+  }
   return await servicesRepositories.getServices();
 }
 

@@ -3,19 +3,19 @@ import db from "../repositories/db.js";
 import Animal from "./animals.model.js";
 
 const service = db.define(
-  "services",
+  "servicos",
   {
-    serviceid: {
+    servicoId: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allowNull: false,
       primaryKey: true,
     },
-    desc: {
+    descricao: {
       type: Sequelize.STRING,
       allowNull: false,
     },
-    value: {
+    valor: {
       type: Sequelize.DOUBLE,
       allowNull: false,
     },
