@@ -1,49 +1,55 @@
 import { ObjectId } from "mongodb/lib/bson.js";
-import { getClient } from "./mongo.db.js";
+import { connect } from "./mongo.db.js";
+import PostSchema from "../schemas/post.schema.js";
 
 async function createPost(post) {
-  const client = getClient();
   try {
-    await client.connect();
-    await client.db("store").collection("posts").insertOne(post);
+    const mongoose = await connect();
+    const Post = mongoose.model("posts", PostSchema);
+    post = new Post(post);
+    await post.save();
   } catch (err) {
     throw err;
-  } finally {
-    await client.close();
   }
 }
-/*
-async function updatePost(post){
-  const client = getClient();
-  try {
-    await client.connect();
-    await client.db("store").collection("posts").updateOne(
-      {postId: }
 
-    );
+async function updatePost(post) {
+  try {
+    const mongoose = await connect();
+    const postId = new ObjectId(post._id);
+    const Post = mongoose.model("posts", PostSchema);
+    await Post.findOneAndUpdate({ _id: postId }, post);
   } catch (err) {
     throw err;
-  } finally {
-    await client.close();
   }
 }
-*/
-async function getPost(postId) {
-  const client = getClient();
+
+async function getPost(id) {
   try {
-    await client.connect();
-    return await client
-      .db("store")
-      .collection("posts")
-      .findOne(ObjectId(postId));
+    const mongoose = await connect();
+    const postId = new ObjectId(id);
+    const Post = mongoose.model("posts", PostSchema);
+    const query = await Post.findOne({ _id: postId });
+    return await query.exec();
   } catch (err) {
     throw err;
-  } finally {
-    await client.close();
+  }
+}
+
+async function getPosts() {
+  try {
+    const mongoose = await connect();
+    const Post = mongoose.model("posts", PostSchema);
+    const query = await Post.find({});
+    return await query.exec();
+  } catch (err) {
+    throw err;
   }
 }
 
 export default {
   createPost,
+  updatePost,
   getPost,
+  getPosts,
 };

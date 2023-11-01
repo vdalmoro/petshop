@@ -7,8 +7,27 @@ async function createPost(req, res, next) {
       throw new Error("Titulo e conteudo são obrigatorios.");
     }
     await postService.createPost(post);
-    res.end();
+    res.send();
     logger.info(`POST /post - ${JSON.stringify(post)}`);
+  } catch (err) {
+    next(err);
+  }
+}
+
+async function getPost(req, res, next) {
+  try {
+    res.send(await postService.getPost());
+    logger.info("GET /post");
+  } catch (err) {
+    next(err);
+  }
+}
+
+async function getPosts(req, res, next) {
+  try {
+    const post = await postService.getPosts();
+    res.json(post);
+    logger.info("GET /post");
   } catch (err) {
     next(err);
   }
@@ -29,5 +48,7 @@ async function createComent(req, res, next) {
 
 export default {
   createPost,
+  getPost,
+  getPosts,
   createComent,
 };

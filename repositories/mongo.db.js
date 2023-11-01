@@ -1,8 +1,8 @@
-import mongodb from "mongodb";
+import mongoose from "mongoose";
 
-function getClient() {
+async function connect() {
   const uri = "mongodb+srv://vdalmoro:hunted@cluster0.xkokta8.mongodb.net/";
-  return new mongodb.MongoClient(uri);
+  return await mongoose.connect(uri);
 }
 
-export { getClient };
+export { connect };
