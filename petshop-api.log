@@ -244,3 +244,21 @@ notNull Violation: proprietarios.telefone cannot be null
 2023-11-01T19:46:29.513Z [petshop-api] error POST  - Post ID e Coment são obrigatorios.
 2023-11-01T19:48:16.198Z [petshop-api] error POST  - Post ID e Coment são obrigatorios.
 2023-11-01T19:48:17.963Z [petshop-api] error POST  - Post ID e Coment são obrigatorios.
+2023-11-01T22:46:17.227Z [petshop-api] info GET /service/id
+2023-11-01T22:46:23.655Z [petshop-api] info GET /services
+2023-11-01T22:46:27.199Z [petshop-api] info GET /services
+2023-11-01T22:46:41.384Z [petshop-api] error POST  - servicesRepositories.createServiceService is not a function
+2023-11-01T22:51:00.202Z [petshop-api] info POST /service - {"servicoId":11,"descricao":"Consulta","valor":"100","animalId":1}
+2023-11-01T23:35:46.455Z [petshop-api] info GET /services
+2023-11-01T23:36:38.964Z [petshop-api] error POST  - Unexpected token “ in JSON at position 1
+2023-11-01T23:37:02.669Z [petshop-api] error POST  - Unexpected token “ in JSON at position 3
+2023-11-01T23:37:07.940Z [petshop-api] error POST  - Unexpected token “ in JSON at position 3
+2023-11-01T23:37:29.466Z [petshop-api] error POST  - Desc, value e animal são obrigatorios.
+2023-11-01T23:38:36.466Z [petshop-api] info POST /service - {"servicoId":10,"descricao":"Consulta","valor":"200","animalId":5}
+2023-11-01T23:38:47.689Z [petshop-api] info GET /services
+2023-11-01T23:39:03.579Z [petshop-api] info GET /services
+2023-11-01T23:40:04.349Z [petshop-api] info GET /service/id
+2023-11-01T23:40:18.569Z [petshop-api] info GET /services
+2023-11-01T23:40:56.045Z [petshop-api] info GET /service/id
+2023-11-01T23:41:26.656Z [petshop-api] info GET /services
+2023-11-01T23:41:47.644Z [petshop-api] info GET /services

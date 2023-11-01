@@ -2,7 +2,7 @@ import owner from "../models/owners.model.js";
 import servicesRepositories from "../repositories/services.repositories.js";
 
 async function createService(service) {
-  return await servicesRepositories.createServiceService(service);
+  return await servicesRepositories.createService(service);
 }
 
 async function getServices(animalId, proprietarioId) {
